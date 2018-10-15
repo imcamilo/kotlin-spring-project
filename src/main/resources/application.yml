@@ -1,1 +1,6 @@
-spring:  profiles:    active: staging
+spring:
+  profiles:
+    active: staging
+
+server:
+  port: 8776
