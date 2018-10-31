@@ -26,4 +26,8 @@ class UsersServiceImp(var usersMapper: UsersMapper) : UsersService{
         usersMapper.deleteUser(email)
     }
 
+    override fun findAll(): List<Users> {
+        return usersMapper.findAll()
+    }
+
 }

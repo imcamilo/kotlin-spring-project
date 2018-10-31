@@ -21,6 +21,11 @@ class UsersController(var usersService: UsersService) {
         return usersService.findByEmail(email)
     }
 
+    @GetMapping
+    fun getAll() : List<Users> {
+        return usersService.findAll()
+    }
+
     @PostMapping
     fun create(@RequestBody users: Users) {
         logger.info("/post")
