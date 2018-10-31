@@ -10,6 +10,8 @@ interface UsersService {
 
     fun findByEmail(email: String): Users
 
-    fun insertParam(users: Users): Unit
+    fun insertUser(users: Users): Unit
+
+    fun updateUser(users: Users): Unit
 
 }
