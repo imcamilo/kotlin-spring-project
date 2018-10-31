@@ -24,12 +24,13 @@ class UsersController(var usersService: UsersService) {
     @PostMapping
     fun create(@RequestBody users: Users) {
         logger.info("/post")
-        usersService.insertParam(users)
+        usersService.insertUser(users)
     }
 
     @PutMapping
-    fun update() {
+    fun update(@RequestBody users: Users) {
         logger.info("/put")
+        usersService.updateUser(users)
     }
 
     @DeleteMapping
