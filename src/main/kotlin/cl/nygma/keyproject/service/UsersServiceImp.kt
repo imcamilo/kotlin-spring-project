@@ -14,4 +14,9 @@ class UsersServiceImp(var usersMapper: UsersMapper) : UsersService{
         return usersMapper.findByEmail(email)
     }
 
+    override fun insertParam(user: Users): Unit {
+        usersMapper.insertParam(user.email, user.password, user.name)
+    }
+
+
 }

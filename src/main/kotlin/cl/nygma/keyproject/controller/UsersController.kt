@@ -22,8 +22,9 @@ class UsersController(var usersService: UsersService) {
     }
 
     @PostMapping
-    fun create() {
+    fun create(@RequestBody users: Users) {
         logger.info("/post")
+        usersService.insertParam(users)
     }
 
     @PutMapping
