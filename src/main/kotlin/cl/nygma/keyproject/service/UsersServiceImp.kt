@@ -22,4 +22,8 @@ class UsersServiceImp(var usersMapper: UsersMapper) : UsersService{
         usersMapper.updateUser(user.email, user.password, user.name)
     }
 
+    override fun deleteUsers(email: String): Unit {
+        usersMapper.deleteUser(email)
+    }
+
 }
