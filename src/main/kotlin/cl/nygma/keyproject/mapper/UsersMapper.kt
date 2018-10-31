@@ -21,4 +21,7 @@ interface UsersMapper {
     fun updateUser(@Param("email") email: String?,
                     @Param("password") password: String?,
                     @Param("name") name: String?): Unit
+
+    @Delete("delete from users where email= #{email}")
+    fun deleteUser(@Param("email") email: String?): Unit
 }

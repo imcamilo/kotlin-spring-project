@@ -14,4 +14,6 @@ interface UsersService {
 
     fun updateUser(users: Users): Unit
 
+    fun deleteUsers(email: String): Unit
+
 }
