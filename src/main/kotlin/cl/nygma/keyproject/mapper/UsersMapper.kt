@@ -24,4 +24,7 @@ interface UsersMapper {
 
     @Delete("delete from users where email= #{email}")
     fun deleteUser(@Param("email") email: String?): Unit
+
+    @Select("select * from users")
+    fun findAll(): List<Users>
 }

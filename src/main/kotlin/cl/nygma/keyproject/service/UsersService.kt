@@ -16,4 +16,6 @@ interface UsersService {
 
     fun deleteUsers(email: String): Unit
 
+    fun findAll(): List<Users>
+
 }
