@@ -14,4 +14,20 @@ class UsersServiceImp(var usersMapper: UsersMapper) : UsersService{
         return usersMapper.findByEmail(email)
     }
 
+    override fun insertUser(user: Users): Unit {
+        usersMapper.insertUser(user.email, user.password, user.name)
+    }
+
+    override fun updateUser(user: Users): Unit {
+        usersMapper.updateUser(user.email, user.password, user.name)
+    }
+
+    override fun deleteUsers(email: String): Unit {
+        usersMapper.deleteUser(email)
+    }
+
+    override fun findAll(): List<Users> {
+        return usersMapper.findAll()
+    }
+
 }

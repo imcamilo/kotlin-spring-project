@@ -21,19 +21,27 @@ class UsersController(var usersService: UsersService) {
         return usersService.findByEmail(email)
     }
 
+    @GetMapping
+    fun getAll() : List<Users> {
+        return usersService.findAll()
+    }
+
     @PostMapping
-    fun create() {
+    fun create(@RequestBody users: Users) {
         logger.info("/post")
+        usersService.insertUser(users)
     }
 
     @PutMapping
-    fun update() {
+    fun update(@RequestBody users: Users) {
         logger.info("/put")
+        usersService.updateUser(users)
     }
 
-    @DeleteMapping
-    fun delete() {
+    @DeleteMapping("delete/{email}")
+    fun delete(@PathVariable email: String) {
         logger.info("/delete")
+        usersService.deleteUsers(email)
     }
 
 }
