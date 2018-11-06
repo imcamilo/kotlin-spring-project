@@ -1,0 +1,9 @@
+server:
+    port: 8766
+
+spring:
+  profiles:
+    active: staging
+  datasource:
+    driver-class-name: org.h2.Driver
+    schema: classpath:import.sql
