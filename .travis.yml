@@ -1,5 +1,9 @@
 language: java
-install: gradle clean
-         gradle build 
-         gradle assemble
-         gradle check
+
+install: true
+
+script:
+- gradle clean
+- gradle build 
+- gradle assemble
+- gradle check
