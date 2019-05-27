@@ -1,9 +1,10 @@
-package cl.nygma.keyproject.controller
+package cl.obj.starter.controller
 
-import cl.nygma.keyproject.model.Users
-import cl.nygma.keyproject.service.UsersService
+import cl.obj.starter.model.Users
+import cl.obj.starter.service.UsersService
 import org.slf4j.LoggerFactory
 import org.springframework.web.bind.annotation.*
+
 
 /**
  * Created by Camilo Jorquera on 29-10-18

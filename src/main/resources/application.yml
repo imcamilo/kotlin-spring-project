@@ -7,3 +7,6 @@ spring:
   datasource:
     driver-class-name: org.h2.Driver
     schema: classpath:import.sql
+  h2:
+    console:
+      enabled: true

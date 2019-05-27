@@ -3,6 +3,5 @@ language: java
 install: true
 
 script:
-- gradle clean
-- gradle build 
-- gradle assemble
+- ./gradlew clean
+- ./gradlew build

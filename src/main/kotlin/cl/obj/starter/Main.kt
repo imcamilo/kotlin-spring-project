@@ -1,4 +1,4 @@
-package cl.nygma.keyproject
+package cl.obj.starter
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

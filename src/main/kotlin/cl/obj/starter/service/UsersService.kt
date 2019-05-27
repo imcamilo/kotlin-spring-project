@@ -1,7 +1,7 @@
-package cl.nygma.keyproject.service
+package cl.obj.starter.service
 
-import cl.nygma.keyproject.model.Users
-import org.apache.ibatis.annotations.Param
+import cl.obj.starter.model.Users
+
 
 /**
  * Created by Camilo Jorquera on 29-10-18

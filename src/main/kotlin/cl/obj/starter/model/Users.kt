@@ -1,6 +1,7 @@
-package cl.nygma.keyproject.model
+package cl.obj.starter.model
 
 import java.io.Serializable
+
 
 /**
  * Created by Camilo Jorquera on 29-10-18

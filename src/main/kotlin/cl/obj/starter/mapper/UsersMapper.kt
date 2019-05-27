@@ -1,7 +1,8 @@
-package cl.nygma.keyproject.mapper
+package cl.obj.starter.mapper
 
-import cl.nygma.keyproject.model.Users
+import cl.obj.starter.model.Users
 import org.apache.ibatis.annotations.*
+
 
 /**
  * Created by Camilo Jorquera on 29-10-18
