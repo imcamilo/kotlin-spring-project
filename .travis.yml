@@ -1,7 +1,10 @@
 language: java
 
-install: true
+jdk:
+  - oraclejdk8
+
+dist: trusty
 
 script:
-- ./gradlew clean
-- ./gradlew build
+  - ./gradlew clean
+  - ./gradlew build
