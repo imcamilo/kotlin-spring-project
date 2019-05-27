@@ -15,15 +15,15 @@ interface UsersMapper {
     @Insert("insert into users (email, password, name) values (#{email}, #{password}, #{name})")
     fun insertUser(@Param("email") email: String?,
                    @Param("password") password: String?,
-                   @Param("name") name: String?): Unit
+                   @Param("name") name: String?)
 
     @Update("update users set password=#{password}, name=#{name} where email = #{email}")
     fun updateUser(@Param("email") email: String?,
                     @Param("password") password: String?,
-                    @Param("name") name: String?): Unit
+                    @Param("name") name: String?)
 
-    @Delete("delete from users where email= #{email}")
-    fun deleteUser(@Param("email") email: String?): Unit
+    @Delete("delete from users where email = #{email}")
+    fun deleteUser(@Param("email") email: String?)
 
     @Select("select * from users")
     fun findAll(): List<Users>

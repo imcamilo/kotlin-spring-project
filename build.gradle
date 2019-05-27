@@ -1,28 +1,29 @@
-buildscript {
-	ext {
-		myBatisVersion = '1.3.2'
-		kotlinVersion = '1.2.71'
-		springBootVersion = '2.0.5.RELEASE'
-	}
-	repositories {
-		mavenCentral()
-	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-		classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
-		classpath("org.jetbrains.kotlin:kotlin-allopen:${kotlinVersion}")
-	}
+plugins {
+	id 'org.springframework.boot' version '2.1.4.RELEASE'
+	id 'org.jetbrains.kotlin.jvm' version '1.2.71'
+	id 'org.jetbrains.kotlin.plugin.spring' version '1.2.71'
+	id 'groovy'
 }
 
-apply plugin: 'kotlin'
-apply plugin: 'kotlin-spring'
-apply plugin: 'java'
-apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
-group = 'cl.nygma.labs'
+group = 'cl.object'
 version = '1.0.0-SNAPSHOT'
-sourceCompatibility = 1.8
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-actuator')
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('com.fasterxml.jackson.module:jackson-module-kotlin')
+	compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+	compile("org.jetbrains.kotlin:kotlin-reflect")
+	compile "org.mybatis.spring.boot:mybatis-spring-boot-starter:2.0.1"
+	runtime "com.h2database:h2"
+}
 
 compileKotlin {
 	kotlinOptions {
@@ -35,18 +36,4 @@ compileTestKotlin {
 		freeCompilerArgs = ["-Xjsr305=strict"]
 		jvmTarget = "1.8"
 	}
-}
-
-repositories {
-	mavenCentral()
-}
-
-dependencies {
-	compile('org.springframework.boot:spring-boot-starter-actuator')
-	compile('org.springframework.boot:spring-boot-starter-web')
-	compile('com.fasterxml.jackson.module:jackson-module-kotlin')
-	compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-	compile("org.jetbrains.kotlin:kotlin-reflect")
-	compile "org.mybatis.spring.boot:mybatis-spring-boot-starter:${myBatisVersion}"
-	runtime "com.h2database:h2"
 }

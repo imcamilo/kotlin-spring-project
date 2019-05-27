@@ -38,7 +38,7 @@ class UsersController(var usersService: UsersService) {
         usersService.updateUser(users)
     }
 
-    @DeleteMapping("delete/{email}")
+    @DeleteMapping("/email/{email}")
     fun delete(@PathVariable email: String) {
         logger.info("/delete")
         usersService.deleteUsers(email)
